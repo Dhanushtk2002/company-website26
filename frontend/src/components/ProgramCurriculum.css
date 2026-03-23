@@ -1,0 +1,209 @@
+.curriculum-section {
+  padding: 100px 0;
+  background-color: #FFFFFF;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+.curriculum-layout {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* Sidebar */
+.curriculum-sidebar {
+  height: 100%;
+}
+
+.sidebar-sticky {
+  position: sticky;
+  top: 120px;
+}
+
+.sidebar-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: #666666;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.chapter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.chapter-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  transition: all 0.3s ease;
+  opacity: 0.25;
+}
+
+.active.chapter-link {
+  opacity: 1;
+}
+
+.chapter-id {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #000000;
+  font-family: 'Fira Sans', sans-serif;
+  min-width: 40px;
+}
+
+.active.chapter-link .chapter-id {
+  color: var(--color-primary);
+}
+
+.chapter-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 0.05em;
+}
+
+/* Content */
+.curriculum-content {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+
+.chapter-block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  scroll-margin-top: 120px;
+}
+
+.chapter-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: rgba(184, 239, 67, 0.2);
+  color: #000000;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.chapter-main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.chapter-desc {
+  font-size: 1.25rem;
+  color: #444444;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+.chapter-checklist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 40px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.check-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.chapter-banner-box {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.banner-image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8) contrast(1.1);
+    transition: transform 0.5s ease;
+}
+
+.banner-image-container:hover .banner-img {
+    transform: scale(1.05);
+}
+
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+}
+
+.banner-session {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .curriculum-layout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+  .curriculum-sidebar {
+    display: none;
+  }
+
+  .chapter-main-title {
+    font-size: 2.5rem;
+  }
+
+  .chapter-checklist {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .chapter-main-title {
+    font-size: 2rem;
+  }
+  .chapter-desc {
+    font-size: 1.1rem;
+  }
+  .banner-session {
+    font-size: 1rem;
+  }
+  .curriculum-content {
+    gap: 80px;
+  }
+}
