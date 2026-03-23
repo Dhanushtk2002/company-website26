@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, Play } from 'lucide-react';
+import VideoModal from './VideoModal';
 import './Hero.css';
 
 const Hero = () => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="hero">
       <div className="grid-container hero-wrapper">
@@ -18,17 +25,17 @@ const Hero = () => {
           </p>
           
           <div className="hero-actions">
-            <button className="btn-primary">
+            <button className="btn-primary" onClick={scrollToContact}>
               JOIN THE REVOLUTION <ArrowRight size={20} />
             </button>
-            <div className="watch-action">
+            <div className="watch-action" onClick={() => setIsVideoOpen(true)}>
               <div className="play-ring">
                 <Play size={16} fill="white" stroke="none" />
               </div>
               <span>WATCH VIDEO</span>
             </div>
           </div>
-
+          
           <div className="hero-stats">
             <div className="stat-unit">
               <span className="unit-value">06+</span>
@@ -48,6 +55,12 @@ const Hero = () => {
         </div>
       </div>
       <div className="hero-background-art"></div>
+
+      <VideoModal 
+        isOpen={isVideoOpen} 
+        onClose={() => setIsVideoOpen(false)} 
+        videoId="7YpA60hU5Ww" // Professional AI/Tech concept video
+      />
     </section>
   );
 };
