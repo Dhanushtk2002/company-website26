@@ -15,7 +15,7 @@ const VideoModal = ({ isOpen, onClose, videoId }) => {
           <iframe
             width="560"
             height="315"
-            src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+            src={`https://www.instagram.com/reels/${videoId}/embed`}
             title="GenLab Video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

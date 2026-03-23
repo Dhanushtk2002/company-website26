@@ -59,7 +59,7 @@ const Hero = () => {
       <VideoModal 
         isOpen={isVideoOpen} 
         onClose={() => setIsVideoOpen(false)} 
-        videoId="7YpA60hU5Ww" // Professional AI/Tech concept video
+        videoId="DV_DGXpjx4e" // User's requested Reel ID
       />
     </section>
   );
