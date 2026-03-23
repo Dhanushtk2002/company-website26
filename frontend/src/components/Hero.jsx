@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, Play } from 'lucide-react';
 import VideoModal from './VideoModal';
+import labVideo from '../assets/labvideo.mp4';
 import './Hero.css';
 
 const Hero = () => {
@@ -59,7 +60,8 @@ const Hero = () => {
       <VideoModal 
         isOpen={isVideoOpen} 
         onClose={() => setIsVideoOpen(false)} 
-        videoId="DV_DGXpjx4e" // User's requested Reel ID
+        videoId={labVideo} 
+        isLocal={true}
       />
     </section>
   );

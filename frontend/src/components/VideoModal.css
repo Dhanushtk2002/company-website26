@@ -39,6 +39,18 @@
   color: var(--color-primary);
 }
 
+.video-container {
+  position: relative;
+  width: 100%;
+}
+
+.local-video {
+  width: 100%;
+  max-height: 80vh;
+  display: block;
+  background: #000;
+}
+
 .video-responsive {
   overflow: hidden;
   padding-bottom: 56.25%;
